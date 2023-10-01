@@ -9,17 +9,18 @@
     <link rel="icon" href="./img/icon-192.png">
     <link rel="stylesheet" href="./styles.css">
     <!-- #./ Ensures we get the excat file we want -->
+    <link rel="mainfest" href="./manifest.json">
 
     <script src="./dexie.min.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                // .then(reg => console.log('Service Worker: Registered'))
-                // .catch(err => console.log(`Service Worker: Error: ${err}`))
-            }
-            )
+                navigator.serviceWorker.register('./sw.js', { scope: '/' })
+                    .then(reg => console.log('Service Worker: Registered'))
+                    .catch(err => console.log(`Service Worker: Error: ${err}`))
+            });
         }
+
     </script>
 </head>
 
