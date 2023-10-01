@@ -8,8 +8,7 @@
 
     <link rel="icon" href="./img/icon-192.png">
     <link rel="stylesheet" href="./styles.css">
-    <!-- #./ Ensures we get the excat file we want -->
-    <link rel="mainfest" href="./manifest.json">
+    <link rel="manifest" href="./manifest.json">
 
     <script src="./dexie.min.js"></script>
     <script>
@@ -18,7 +17,7 @@
                 navigator.serviceWorker.register('./sw.js', { scope: '/' })
                     .then(reg => console.log('Service Worker: Registered'))
                     .catch(err => console.log(`Service Worker: Error: ${err}`))
-            });``
+            });
         }
 
     </script>
@@ -29,15 +28,8 @@
         <p>My Shopping List</p>
     </nav>
 
-
-    <!-- Two features I want to add in is, optional calculate with TAX and a discount option
-    so for tax it will set to on by default to Ontario and user can change the tax if they want
-
-    Discount option is basically if its 15% off or something, they can enter it otherwise its 0% by default -->
-
     <div class="continaer">
         <form id="itemForm">
-
             <label>
                 Name of Item:
                 <input type="text" id="nameInput" required>
@@ -64,44 +56,12 @@
         </form>
     </div>
 
-
     <div id="itemsDiv">
-        <!-- <div class="item">
-
-            <label>
-                <input type="checkbox" class="checkbox" checked>
-            </label>
-
-            <div class="itemInfo">
-                <p> Fruit Juice </p>
-                <p>$5 x 3</p>
-            </div>
-
-            <button class="deleteButton"> X </button>
-        </div> -->
-
-        <!-- 
-        <div class="item purchased">
-
-            <label>
-                <input type="checkbox" class="checkbox" checked>
-            </label>
-
-            <div class="itemInfo">
-                <p> Fruit Juice </p>
-                <p>$5 x 3</p>
-            </div>
-
-            <button class="deleteButton"> X </button>
-        </div> -->
     </div>
     <div id="totalPriceDiv">
     </div>
 
     <button id="removeAll" onclick="removeAll()">Reset</button>
-
-
-
 
     <script src="./main.js"></script>
 </body>
