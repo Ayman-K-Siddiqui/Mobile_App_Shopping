@@ -47,6 +47,7 @@ const renderItems = async () => {
 
     .join("");
   totalPrice = Math.max(totalPrice, 0);
+  totalPrice * 1.13; // #adds tax to the total price
   // #makes sure that the total price is not a negative number
   totalPriceDiv.innerText = `Total Price: $${totalPrice.toFixed(2)}`;
 };
