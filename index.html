@@ -12,17 +12,13 @@
 
     <script src="./dexie.min.js"></script>
     <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("./sw.js").then(
-                (registration) => {
-                    console.log("Service worker registration succeeded:", registration);
-                },
-                (error) => {
-                    console.error(`Service worker registration failed: ${error}`);
-                }
-            );
-        } else {
-            console.error("Service workers are not supported.");
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                // .then(reg => console.log('Service Worker: Registered'))
+                // .catch(err => console.log(`Service Worker: Error: ${err}`))
+            }
+            )
         }
     </script>
 </head>
