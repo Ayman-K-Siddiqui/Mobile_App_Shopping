@@ -30,7 +30,8 @@ nav {
 }
 
 #quantityInput,
-#priceInput {
+#priceInput,
+#discountInput {
   width: 3rem;
 }
 
@@ -39,17 +40,21 @@ nav {
   background: #00805a;
   color: #fff;
   padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 #itemsDiv {
   margin-top: 3rem;
   margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .item {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   margin-bottom: 0.5rem;
+  background: #f2f4f4;
 }
 
 .itemInfo {
@@ -82,4 +87,18 @@ nav {
 
 .purchased p {
   text-decoration: line-through;
+}
+
+#removeAll {
+  border: unset;
+  padding: 0.5rem;
+  color: black;
+  background: gainsboro;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  border-radius: 0.3rem;
+}
+
+#totalPriceDiv {
+  margin-left: 1rem;
 }
